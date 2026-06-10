@@ -68,8 +68,15 @@ export default function App() {
   const [isListening, setIsListening] = useState(false);
   const [isSpeaking, setIsSpeaking] = useState(false);
 
-  const BACKEND_URL = "http://localhost:8000";
+  // const BACKEND_URL = "http://localhost:8000";
   // const BACKEND_URL = "https://ai-study-assistant-qcde.onrender.com";
+
+  // Automatically switch between local and production based on the environment
+const BACKEND_URL = window.location.hostname === "localhost" 
+  ? "http://localhost:8000" 
+  : "https://ai-study-assistant-production.onrender.com"; 
+
+// Ensure you use BACKEND_URL in your fetch/axios requests
   
 
   useEffect(() => {
