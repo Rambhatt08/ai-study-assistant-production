@@ -48,7 +48,7 @@ origins = [
     "http://localhost:5173", 
     "http://localhost:5174",
     "http://localhost:8000",
-    "https://ai-study-assistant-40cnw44wf.vercel.app" 
+    "https://ai-study-assistant-production-37tqswyyk.vercel.app" 
 ]
 
 app.add_middleware(
