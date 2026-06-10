@@ -1,0 +1,5 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+/* This enables the manual dark mode toggle */
+@custom-variant dark (&:is(.dark *));

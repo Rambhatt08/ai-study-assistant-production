@@ -1,0 +1,5 @@
+# Python & Backend Secrets
+.env
+__pycache__/
+venv/
+env/
