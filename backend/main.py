@@ -48,13 +48,13 @@ origins = [
     "http://localhost:5173", 
     "http://localhost:5174",
     "http://localhost:8000",
-    "https://ai-study-assistant-production-7qak9w695.vercel.app"  # Your active deployment URL
+    "https://ai-study-assistant-production-71p0z34ei.vercel.app" 
 ]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,  # Points back to your explicit whitelist array
-    allow_credentials=True, 
+    allow_origins=["*"], 
+    allow_credentials=False, 
     allow_methods=["*"], 
     allow_headers=["*"], 
 )
@@ -62,9 +62,6 @@ app.add_middleware(
 # ========================================================
 # === GROQ Llama-3 REST API HELPER (Bypasses Google) =====
 # ========================================================
-# ========================================================================
-# === GROQ Llama-3 REST API HELPER WITH EXPONENTIAL BACKOFF RECOVERY ===
-# ========================================================================
 def call_groq_api(prompt: str, system_prompt: str = "") -> str:
     api_key = os.getenv("GROQ_API_KEY")
     if not api_key:
@@ -81,49 +78,34 @@ def call_groq_api(prompt: str, system_prompt: str = "") -> str:
         "messages": messages
     }
     
+    # EXACT Chrome Browser Signature to bypass Cloudflare Error 1010
     headers = {
         'Content-Type': 'application/json',
         'Authorization': f'Bearer {api_key}',
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
         'Accept': 'application/json'
     }
     
     req = urllib.request.Request(url, data=json.dumps(payload).encode('utf-8'), headers=headers)
     
-    # SENIOR IMPLEMENTATION: Smart backoff loop to clear cloud rate limit limits gracefully
     max_retries = 3
     for attempt in range(max_retries):
         try:
             with urllib.request.urlopen(req, timeout=15) as response:
                 result = json.loads(response.read().decode('utf-8'))
                 return result['choices'][0]['message']['content']
-                
         except urllib.error.HTTPError as e:
             error_body = e.read().decode('utf-8')
-            
-            if e.code == 429:
-                wait_time = (attempt + 1) * 3  # Cascades upward: 3s, then 6s, then 9s
-                print(f"⚠️ Rate limit hit (429). Retrying in {wait_time}s... (Attempt {attempt + 1}/{max_retries})")
-                time.sleep(wait_time)
-                continue  # Loop back up and try the handshake again
-                
-            elif e.code == 503 and attempt < max_retries - 1:
-                print(f"⚠️ Groq Service Unavailable (503). Retrying in 3s...")
+            print(f"❌ GROQ ERROR: {e.code} - {error_body}")
+            if e.code in [503, 429] and attempt < max_retries - 1:
                 time.sleep(3)
-                continue
             else:
-                print(f"❌ GROQ CRITICAL ERROR: {e.code} - {error_body}")
                 raise Exception(f"Groq API Error: {e.code}")
-                
         except Exception as e:
             if attempt < max_retries - 1:
-                print(f"⚠️ Network connection anomaly detected. Re-establishing link in 3s...")
                 time.sleep(3)
-                continue
             else:
                 raise e
-                
-    raise Exception("Max query retries exceeded. Cloud service limits are currently saturated.")
 
 # --- DATA MODELS ---
 class YouTubeRequest(BaseModel):
