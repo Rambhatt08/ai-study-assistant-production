@@ -207,7 +207,9 @@ def forgot_password(request: ForgotPasswordRequest):
         {"$set": {"reset_token": reset_token, "reset_token_expiry": expiry_time}}
     )
     
-    reset_link = f"http://localhost:5173?mode=reset-password&token={reset_token}"
+    # 🛑 THE FIX: Replaced localhost with your permanent Vercel domain
+    reset_link = f"https://ai-study-assistant-production.vercel.app?mode=reset-password&token={reset_token}"
+    
     email_was_sent = send_password_reset_email(clean_email, reset_link)
     
     if not email_was_sent:
