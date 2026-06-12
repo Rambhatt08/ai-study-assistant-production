@@ -69,8 +69,8 @@ If you want to run this project locally on your machine, follow these steps:
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/Rambhatt08/ai-study-assistant-production.git
-cd ai-study-assistant
+git clone [https://github.com/Rambhatt08/ai-study-assistant-production.git](https://github.com/Rambhatt08/ai-study-assistant-production.git)
+cd ai-study-assistant-production
 
 2. Backend Setup
 Navigate to the backend folder and install the required Python packages:
@@ -82,6 +82,13 @@ Create a .env file in the backend directory and add your secret keys:
 
 MONGO_URI=your_mongodb_atlas_connection_string
 GROQ_API_KEY=your_groq_api_key
+
+# Security & Authentication
+SECRET_KEY=generate_a_long_random_string_here
+
+# Email Verification (SMTP Setup)
+EMAIL_SENDER=your_gmail_address@gmail.com
+EMAIL_APP_PASSWORD=your_16_digit_google_app_password
 
 Start the FastAPI server:
 
