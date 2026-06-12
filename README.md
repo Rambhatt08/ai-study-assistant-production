@@ -29,6 +29,7 @@ A cloud-native, multi-modal educational platform that leverages Large Language M
 
 ### 🤖 AI Study Generation (Powered by Groq)
 * **Ultra-Fast Summarization:** Uses `Llama-3.1-8b-instant` to format raw text into clean, readable bullet points in seconds.
+* **Word Document Export:** Users can instantly download their generated study summaries as beautifully formatted Microsoft Word (`.docx`) files for offline reading and sharing.
 * **Flashcard Engine:** Automatically generates 5-10 study flashcards formatted as strict JSON arrays for dynamic UI rendering.
 * **Quiz Engine:** Generates multiple-choice quizzes based on the ingested context.
 * **Context-Aware AI Tutor:** A dedicated chat interface that answers questions strictly based on the uploaded document context.
@@ -79,7 +80,7 @@ cd backend
 pip install -r requirements.txt
 
 Create a .env file in the backend directory and add your secret keys:
-> **Note:** To run this project locally, you must generate a free API key from the [Groq Console](https://console.groq.com/keys) and add it to your `.env` file, otherwise the AI generation features will not work.
+**Note:** To run this project locally, you must generate a free API key from the [Groq Console](https://console.groq.com/keys) and add it to your `.env` file, otherwise the AI generation features will not work.
 
 MONGO_URI=your_mongodb_atlas_connection_string
 GROQ_API_KEY=your_groq_api_key
@@ -125,6 +126,8 @@ Add your new key to your environment variables:
 ```env
 GEMINI_API_KEY=your_google_gemini_key_here
 
+3. Install the SDK:
+You will need to install the Google Generative AI package:
 pip install google-genai
 
 4. Swap the Logic:
