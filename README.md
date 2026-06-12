@@ -79,6 +79,7 @@ cd backend
 pip install -r requirements.txt
 
 Create a .env file in the backend directory and add your secret keys:
+> **Note:** To run this project locally, you must generate a free API key from the [Groq Console](https://console.groq.com/keys) and add it to your `.env` file, otherwise the AI generation features will not work.
 
 MONGO_URI=your_mongodb_atlas_connection_string
 GROQ_API_KEY=your_groq_api_key
@@ -106,3 +107,25 @@ Start the Vite development server:
 npm run dev
 
 The frontend will run on http://localhost:5173
+
+
+---
+
+## 🔄 Alternative AI Engine: Google Gemini
+
+By default, this project is configured to use the **Groq Llama 3.1** engine for ultra-low latency inference. However, the architecture is modular, and you can easily swap it to use Google's Gemini models via Google AI Studio.
+
+If you prefer to use Gemini:
+
+**1. Get an API Key:**
+Generate a free API key from [Google AI Studio](https://aistudio.google.com/).
+
+**2. Update your `.env` file:**
+Add your new key to your environment variables:
+```env
+GEMINI_API_KEY=your_google_gemini_key_here
+
+pip install google-genai
+
+4. Swap the Logic:
+Inside backend/main.py, replace the call_groq_api function with the Gemini SDK integration to route the prompts through Google's infrastructure instead.
