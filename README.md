@@ -1,0 +1,101 @@
+# 🧠 AI Powered Study Buddy
+
+![Live Status](https://img.shields.io/badge/Status-Live_Production-success)
+![Frontend](https://img.shields.io/badge/Frontend-React_%7C_Vite-blue)
+![Backend](https://img.shields.io/badge/Backend-FastAPI_%7C_Python-green)
+![AI Engine](https://img.shields.io/badge/AI_Model-Groq_Llama_3.1-orange)
+![Database](https://img.shields.io/badge/Database-MongoDB_Atlas-darkgreen)
+
+A cloud-native, multi-modal educational platform that leverages Large Language Models (LLMs) to automatically convert raw study materials (videos, audio, and documents) into structured notes, interactive flashcards, and quizzes.
+
+## 🚀 Live Demo
+* **Frontend Application:** https://ai-study-assistant-production-f2nvuqhkw.vercel.app
+* **Backend API:** https://ai-study-assistant-production.onrender.com/
+
+---
+
+## ✨ Core Features
+
+### 🔐 Secure Authentication & User Isolation
+* **JWT-Based Login:** Secure, tokenized session management.
+* **Email Verification:** OTP (One-Time Password) generation via SMTP for account creation.
+* **Password Recovery:** Time-sensitive, cryptographic password reset links.
+* **Multi-Tenant Architecture:** strict MongoDB queries ensure users can only access their own private study data.
+
+### 📥 Multi-Modal Ingestion Engine
+* **YouTube Processing:** Extracts hidden transcripts from URLs natively using `youtube-transcript-api`.
+* **PDF Document Parsing:** Scans and extracts raw text from complex documents using `PyPDF`.
+* **Direct Media Uploads:** Processes raw MP4/MP3 files using `MoviePy` (with strict 25MB guardrails to protect server memory).
+
+### 🤖 AI Study Generation (Powered by Groq)
+* **Ultra-Fast Summarization:** Uses `Llama-3.1-8b-instant` to format raw text into clean, readable bullet points in seconds.
+* **Flashcard Engine:** Automatically generates 5-10 study flashcards formatted as strict JSON arrays for dynamic UI rendering.
+* **Quiz Engine:** Generates multiple-choice quizzes based on the ingested context.
+* **Context-Aware AI Tutor:** A dedicated chat interface that answers questions strictly based on the uploaded document context.
+
+### 📊 Analytics Dashboard
+* Tracks consecutive daily "Study Streaks".
+* Aggregates total notes generated.
+* Analyzes and displays the user's most frequently studied topics.
+
+---
+
+## 🛠️ Technology Stack
+
+**Frontend:**
+* React.js
+* Vite
+* Hosted on **Vercel**
+
+**Backend:**
+* Python 3
+* FastAPI
+* Uvicorn
+* Hosted on **Render**
+
+**AI & Data:**
+* **Groq REST API** (Bypassing heavy SDKs for lower latency)
+* **MongoDB Atlas** (Cloud Database with strict TLS certification)
+
+**Resilience & Stability:**
+* Implemented **Exponential Backoff** algorithms to gracefully handle 429 Rate Limits from the cloud LLM provider without crashing the user experience.
+* Hardened CORS (Cross-Origin Resource Sharing) policies.
+
+---
+
+## 💻 Local Development Setup
+
+If you want to run this project locally on your machine, follow these steps:
+
+### 1. Clone the Repository
+```bash
+git clone [https://github.com/your-username/ai-study-assistant.git](https://github.com/your-username/ai-study-assistant.git)
+cd ai-study-assistant
+
+2. Backend Setup
+Navigate to the backend folder and install the required Python packages:
+
+cd backend
+pip install -r requirements.txt
+
+Create a .env file in the backend directory and add your secret keys:
+
+MONGO_URI=your_mongodb_atlas_connection_string
+GROQ_API_KEY=your_groq_api_key
+
+Start the FastAPI server:
+
+uvicorn main:app --reload
+
+The backend will run on http://localhost:8000
+
+3. Frontend Setup
+Open a new terminal, navigate to the frontend folder, and install the Node dependencies:
+
+cd frontend
+npm install
+
+Start the Vite development server:
+npm run dev
+
+The frontend will run on http://localhost:5173
