@@ -54,7 +54,7 @@ A cloud-native, multi-modal educational platform that leverages Large Language M
 * Uvicorn
 * Hosted on **Render**
 
-* **Third-Party Services:**
+**Third-Party Services:**
 * **Brevo (formerly Sendinblue):** SMTP API integration for secure, reliable email dispatching.
 
 **AI & Data:**
