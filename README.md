@@ -10,7 +10,7 @@ A cloud-native, multi-modal educational platform that leverages Large Language M
 
 ## 🚀 Live Demo
 * **Frontend Application:** https://ai-study-assistant-production-f2nvuqhkw.vercel.app
-* **Backend API:** https://ai-study-assistant-production.onrender.com/
+* **Backend API:** https://ai-study-assistant-production.onrender.com
 
 ---
 
@@ -69,7 +69,7 @@ If you want to run this project locally on your machine, follow these steps:
 
 ### 1. Clone the Repository
 ```bash
-git clone [https://github.com/your-username/ai-study-assistant.git](https://github.com/your-username/ai-study-assistant.git)
+git clone https://github.com/Rambhatt08/ai-study-assistant-production.git
 cd ai-study-assistant
 
 2. Backend Setup
