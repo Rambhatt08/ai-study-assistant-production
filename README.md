@@ -6,7 +6,7 @@
 ![AI Engine](https://img.shields.io/badge/AI_Model-Groq_Llama_3.1-orange)
 ![Database](https://img.shields.io/badge/Database-MongoDB_Atlas-darkgreen)
 
-A cloud-native, multi-modal educational platform that leverages Large Language Models (LLMs) to automatically convert raw study materials (videos, audio, and documents) into structured notes, interactive flashcards, and quizzes.
+A cloud-native, multi-modal educational platform that Uses Large Language Models (LLMs) to automatically convert raw study materials (videos, audio, and documents) into structured notes, interactive flashcards, and quizzes.
 
 ## 🚀 Live Demo
 * **Frontend Application:** https://ai-study-assistant-production-f2nvuqhkw.vercel.app
