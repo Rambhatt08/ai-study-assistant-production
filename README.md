@@ -10,7 +10,7 @@ A cloud-native, multi-modal educational platform that Uses Large Language Models
 
 ## 🚀 Live Demo
 * **Frontend Application:** https://ai-study-assistant-production-f2nvuqhkw.vercel.app
-* **Backend API:** https://ai-study-assistant-production.onrender.com
+* **Backend:** https://ai-study-assistant-production.onrender.com
 
 ---
 
