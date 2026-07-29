@@ -145,69 +145,87 @@ Track your study progress through:
 
 ## 🔐 Authentication
 
-| Login | Signup |
-|-------|--------|
-| ![](screenshots/authentication/01-login-page.png) | ![](screenshots/authentication/02-signup-page.png) |
+| Login | Loading Screen |
+|-------|----------------|
+| ![](screenshots/authentication/01-login-page.png) | ![](screenshots/authentication/01-1-page-loading.png) |
 
-| Forgot Password | Reset Password |
-|----------------|----------------|
-| ![](screenshots/authentication/03-forgot-password-page.png) | ![](screenshots/authentication/03-2-reset-password-page.png) |
+| Signup | Email OTP Verification |
+|--------|------------------------|
+| ![](screenshots/authentication/02-signup-page.png) | ![](screenshots/authentication/02-1-signup-verify-otp.png) |
+
+| Forgot Password | Password Reset Email |
+|----------------|----------------------|
+| ![](screenshots/authentication/03-forgot-password-page.png) | ![](screenshots/authentication/03-1-forgot-password-email.png) |
+
+| Reset Password | Password Reset Success Email |
+|----------------|------------------------------|
+| ![](screenshots/authentication/03-2-reset-password-page.png) | ![](screenshots/authentication/03-3-password-reset-success-email.png) |
 
 ---
 
 ## 🏠 Dashboard
 
-![](screenshots/dashboard/04-dashboard.png)
+| Main Dashboard | Dark Theme | Analytics Dashboard |
+|---------------|------------|---------------------|
+| ![](screenshots/dashboard/04-dashboard.png) | ![](screenshots/dashboard/15-dark-theme.png) | ![](screenshots/dashboard/16-analytics-dashboard.png) |
 
 ---
 
-## 📝 AI Summaries
+## 🤖 AI Features
 
-### YouTube Summary
+### YouTube Video Processing
 
-![](screenshots/ai-features/05-youtube-video-summary-page.png)
-
----
-
-### PDF Summary
-
-![](screenshots/ai-features/06-pdf-summary-page.png)
+| YouTube Summary Page | YouTube Analysis | Generated Summary |
+|----------------------|------------------|-------------------|
+| ![](screenshots/ai-features/05-youtube-video-summary-page.png) | ![](screenshots/ai-features/08-youtube-analysis-page.png) | ![](screenshots/ai-features/08-1-youtube-summary-result.png) |
 
 ---
 
-### Audio Summary
+### PDF Processing
 
-![](screenshots/ai-features/07-audio-video-summary-page.png)
-
----
-
-### Video Summary
-
-![](screenshots/ai-features/14-video-mp4-summary-page.png)
+| PDF Summary Page | PDF Summary Result |
+|------------------|--------------------|
+| ![](screenshots/ai-features/06-pdf-summary-page.png) | ![](screenshots/ai-features/09-pdf-summary-result.png) |
 
 ---
 
-## 💬 AI Tutor
+### Audio & Video Processing
 
-![](screenshots/ai-features/08-2-ai-tutor-chatbot.png)
+| Audio Summary | Video Summary |
+|--------------|---------------|
+| ![](screenshots/ai-features/10-audio-mp3-summary-page.png) | ![](screenshots/ai-features/14-video-mp4-summary-page.png) |
+
+---
+
+### AI Tutor & Export
+
+| AI Tutor | Word Document Export |
+|----------|----------------------|
+| ![](screenshots/ai-features/08-2-ai-tutor-chatbot.png) | ![](screenshots/ai-features/08-3-word-document-download.png) |
+
+---
+
+### File Upload
+
+| Upload Learning Material |
+|--------------------------|
+| ![](screenshots/ai-features/13-file-upload-page.png) |
 
 ---
 
 ## 🧠 Flashcards
 
-![](screenshots/flashcards/11-1-flashcard-study-page.png)
+| Flashcard Home | Flashcard Study |
+|---------------|-----------------|
+| ![](screenshots/flashcards/11-flashcard-home.png) | ![](screenshots/flashcards/11-1-flashcard-page.png) |
 
 ---
 
 ## ❓ Quiz
 
-![](screenshots/quiz/12-quiz-page.png)
-
----
-
-## 📊 Analytics Dashboard
-
-![](screenshots/dashboard/16-analytics-dashboard.png)
+| Quiz Page | Quiz Result | Answer Review |
+|-----------|-------------|---------------|
+| ![](screenshots/quiz/12-quiz-page.png) | ![](screenshots/quiz/12-1-quiz-result-page.png) | ![](screenshots/quiz/12-2-quiz-review-page.png) |
 
 ---
 
