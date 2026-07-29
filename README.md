@@ -1,6 +1,5 @@
 # 🧠 AI-Powered Study Buddy
 
-![Live Status](https://img.shields.io/badge/Status-Live_Production-success)
 ![Frontend](https://img.shields.io/badge/Frontend-React_%7C_Vite-blue)
 ![Backend](https://img.shields.io/badge/Backend-FastAPI_%7C_Python-green)
 ![AI Engine](https://img.shields.io/badge/AI_Model-Groq_Llama_3.1-orange)
