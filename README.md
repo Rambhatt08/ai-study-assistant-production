@@ -1,25 +1,28 @@
 # 🧠 AI-Powered Study Buddy
 
-![Frontend](https://img.shields.io/badge/Frontend-React_%7C_Vite-blue)
-![Backend](https://img.shields.io/badge/Backend-FastAPI_%7C_Python-green)
-![AI Engine](https://img.shields.io/badge/AI_Model-Groq_Llama_3.1-orange)
-![Database](https://img.shields.io/badge/Database-MongoDB_Atlas-darkgreen)
+![React](https://img.shields.io/badge/Frontend-React%20%7C%20Vite-61DAFB?logo=react&logoColor=white)
+![FastAPI](https://img.shields.io/badge/Backend-FastAPI-009688?logo=fastapi&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.x-3776AB?logo=python&logoColor=white)
+![MongoDB](https://img.shields.io/badge/Database-MongoDB%20Atlas-47A248?logo=mongodb&logoColor=white)
+![Groq](https://img.shields.io/badge/AI-Groq%20Llama%203.1-orange)
+![License](https://img.shields.io/badge/License-Educational-blue)
 
 An AI-powered educational platform that transforms study materials into structured learning resources using Large Language Models (LLMs).
 
-The application supports multiple input formats—including YouTube videos, PDF documents, audio, and video files—and automatically generates concise summaries, interactive flashcards, quizzes, and context-aware AI tutoring to improve the learning experience.
+The application accepts multiple learning formats—including **YouTube videos, PDF documents, audio files, and video files**—and automatically generates concise summaries, interactive flashcards, quizzes, downloadable notes, and context-aware AI tutoring.
 
 ---
 
-## 📖 Table of Contents
+# 📑 Table of Contents
 
 - About the Project
 - Features
 - Screenshots
 - Technology Stack
-- System Architecture
-- Installation
 - Project Structure
+- Installation
+- Environment Variables
+- Security Features
 - Future Enhancements
 - Author
 
@@ -27,17 +30,20 @@ The application supports multiple input formats—including YouTube videos, PDF 
 
 # 📚 About the Project
 
-Traditional studying often involves manually reading lengthy documents, taking notes, and creating revision materials.
+Students often spend hours reading lengthy documents, watching lectures, and preparing revision notes.
 
-AI-Powered Study Buddy automates this entire workflow using modern Artificial Intelligence techniques. Users simply upload their learning material, and the platform instantly generates:
+**AI-Powered Study Buddy** simplifies this process by using Artificial Intelligence to automatically convert learning materials into organized study resources.
 
-- 📄 Well-structured notes
-- 🧠 Interactive flashcards
-- ❓ Multiple-choice quizzes
-- 💬 AI Tutor for follow-up questions
-- 📥 Downloadable Word documents
+Simply upload your content, and the platform instantly generates:
 
-The goal is to reduce study time while improving understanding and retention.
+- 📄 Structured Notes
+- 📝 AI Summaries
+- 🧠 Flashcards
+- ❓ MCQ Quizzes
+- 💬 AI Tutor
+- 📥 Word Document Export
+
+The goal is to reduce study time while improving learning efficiency and retention.
 
 ---
 
@@ -45,37 +51,37 @@ The goal is to reduce study time while improving understanding and retention.
 
 ## 🔐 Authentication
 
-- Secure JWT Authentication
-- User Registration
+- JWT Authentication
+- Secure Login & Registration
 - Email OTP Verification
 - Forgot Password
 - Password Reset via Email
 - Protected Routes
-- User-specific Data Isolation
+- User Data Isolation
 
 ---
 
 ## 📥 Multi-Modal Content Processing
 
-Supports multiple learning resources:
+Supported Inputs
 
 - 🎥 YouTube Videos
 - 📄 PDF Documents
 - 🎵 MP3 Audio
 - 🎬 MP4 Videos
 
-The platform extracts text from each source before sending it to the AI engine.
+The system extracts text from each source before sending it to the AI model.
 
 ---
 
 ## 🤖 AI Features
 
-### 📝 Smart Summarization
+### 📝 AI Summarization
 
-Generate concise and structured summaries from:
+Generate clean and structured summaries from:
 
 - YouTube Videos
-- PDF Files
+- PDF Documents
 - Audio Files
 - Video Files
 
@@ -85,25 +91,26 @@ Generate concise and structured summaries from:
 
 - Ask follow-up questions
 - Context-aware responses
-- Answers based only on uploaded study material
+- Answers based only on uploaded content
 
 ---
 
 ### 🧠 Flashcard Generator
 
-Automatically creates study flashcards for quick revision.
+Automatically creates revision flashcards for quick learning.
 
 ---
 
 ### ❓ Quiz Generator
 
-Generate multiple-choice quizzes from uploaded content.
+Generate Multiple Choice Questions (MCQs)
 
-Includes:
+Features include:
 
+- Instant Evaluation
 - Score Calculation
 - Answer Review
-- Instant Feedback
+- Learning Feedback
 
 ---
 
@@ -115,28 +122,28 @@ Download generated summaries as Microsoft Word (.docx) documents.
 
 ## 📊 Analytics Dashboard
 
-Track learning progress with:
+Track your study progress through:
 
 - Study Streak
 - Total Summaries Generated
 - Most Studied Topics
-- Activity Overview
+- Learning Activity
 
 ---
 
 ## 🌙 User Experience
 
+- Modern Dashboard
+- Dark Theme
 - Responsive Design
-- Dark Mode
-- Modern UI
-- Fast Loading
-- Clean Dashboard
+- Fast Performance
+- Clean User Interface
 
 ---
 
-# 📸 Screenshots
+# 📸 Application Screenshots
 
-## Authentication
+## 🔐 Authentication
 
 | Login | Signup |
 |-------|--------|
@@ -148,57 +155,71 @@ Track learning progress with:
 
 ---
 
-## Dashboard
+## 🏠 Dashboard
 
 ![](screenshots/dashboard/04-dashboard.png)
 
 ---
 
-## AI Study Generation
+## 📝 AI Summaries
 
 ### YouTube Summary
 
 ![](screenshots/ai-features/05-youtube-video-summary-page.png)
 
+---
+
 ### PDF Summary
 
 ![](screenshots/ai-features/06-pdf-summary-page.png)
+
+---
 
 ### Audio Summary
 
 ![](screenshots/ai-features/07-audio-video-summary-page.png)
 
+---
+
 ### Video Summary
 
 ![](screenshots/ai-features/14-video-mp4-summary-page.png)
 
-### AI Tutor
+---
+
+## 💬 AI Tutor
 
 ![](screenshots/ai-features/08-2-ai-tutor-chatbot.png)
 
-### Flashcards
+---
+
+## 🧠 Flashcards
 
 ![](screenshots/flashcards/11-1-flashcard-study-page.png)
 
-### Quiz
+---
+
+## ❓ Quiz
 
 ![](screenshots/quiz/12-quiz-page.png)
 
-### Analytics
+---
 
-![](screenshots/analytics/16-analytics-dashboard.png)
+## 📊 Analytics Dashboard
+
+![](screenshots/dashboard/16-analytics-dashboard.png)
 
 ---
 
-# 🏗️ Technology Stack
+# 🛠️ Technology Stack
 
 ## Frontend
 
 - React.js
 - Vite
-- JavaScript
 - HTML5
 - CSS3
+- JavaScript
 
 ---
 
@@ -207,7 +228,6 @@ Track learning progress with:
 - Python
 - FastAPI
 - Uvicorn
-- JWT Authentication
 
 ---
 
@@ -224,32 +244,32 @@ Track learning progress with:
 
 ---
 
-## Document Processing
+## Libraries & Tools
 
 - PyPDF
 - MoviePy
 - youtube-transcript-api
 - python-docx
+- JWT Authentication
+- SMTP (Brevo)
 
 ---
 
-## Email Services
+# 📂 Project Structure
 
-- SMTP
-- Brevo
-
----
-
-# ⚙️ Project Structure
-
-```
-AI-Study-Buddy
+```text
+ai-study-assistant
 │
-├── backend
+├── backend/
 │
-├── frontend
+├── frontend/
 │
-├── screenshots
+├── screenshots/
+│   ├── authentication/
+│   ├── dashboard/
+│   ├── ai-features/
+│   ├── flashcards/
+│   └── quiz/
 │
 ├── requirements.txt
 │
@@ -260,15 +280,15 @@ AI-Study-Buddy
 
 # 🚀 Installation
 
-## Clone Repository
+## Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/AI-Study-Buddy.git
+git clone https://github.com/Rambhatt08/ai-study-assistant-production.git
 ```
 
 ---
 
-## Backend
+## Backend Setup
 
 ```bash
 cd backend
@@ -284,7 +304,7 @@ uvicorn main:app --reload
 
 ---
 
-## Frontend
+## Frontend Setup
 
 ```bash
 cd frontend
@@ -296,18 +316,16 @@ npm run dev
 
 ---
 
-## Environment Variables
+# 🔑 Environment Variables
 
-Create a `.env` file.
-
-Example:
+Create a `.env` file in the backend directory.
 
 ```env
 GROQ_API_KEY=your_api_key
 
-JWT_SECRET_KEY=your_secret
+JWT_SECRET_KEY=your_secret_key
 
-MONGODB_URI=your_database_url
+MONGODB_URI=your_mongodb_connection_string
 
 SMTP_EMAIL=your_email
 
@@ -322,32 +340,40 @@ SMTP_PASSWORD=your_password
 - Password Hashing
 - Email Verification
 - Password Reset Tokens
-- User Data Isolation
 - Protected API Routes
-- Secure Environment Variables
+- User Data Isolation
+- Environment Variables
+- Secure MongoDB Connection
 
 ---
 
 # 🚀 Future Enhancements
 
-- OCR for Image Notes
+- OCR Support for Images
 - Handwritten Notes Recognition
-- PowerPoint Support
-- Collaborative Study Rooms
+- PPT/PPTX Support
 - AI Mind Maps
 - Voice-based AI Tutor
 - Mobile Application
+- Collaborative Study Rooms
+- Multi-language Support
 
 ---
 
 # 👨‍💻 Author
 
-**Your Name**
+**Ram Bhatt**
 
-Final Year B.E. Computer Engineering Student
 
-Artificial Intelligence • Machine Learning • Full Stack Development
+**Skills**
+
+- Python
+- FastAPI
+- React.js
+- Machine Learning
+- Artificial Intelligence
+- MongoDB
 
 ---
 
-## ⭐ If you found this project useful, consider giving it a star!
+## ⭐ If you found this project useful, please consider giving it a Star!
